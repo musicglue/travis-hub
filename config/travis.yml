@@ -1,6 +1,6 @@
 sentry: &sentry
   dsn: https://tok:en@app.getsentry.com/app_id
-    
+
 production:
   domain: travis-ci.local
   notifications:
@@ -45,3 +45,19 @@ development:
 
 test:
   domain: test.travis-ci.local
+
+vagrant:
+  domain: travis-vagrant.musicglue.com
+  notifications:
+    - email
+  database:
+    host: vm-travis-web
+    database: travis_vagrant
+    username: postgres
+    password: password
+  amqp:
+    host: localhost
+    port: 5672
+    username: travisci_hub
+    password: travisci_hub_password
+    vhost: travisci.vagrant
