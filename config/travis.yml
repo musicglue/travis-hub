@@ -61,3 +61,5 @@ vagrant:
     username: travisci_hub
     password: travisci_hub_password
     vhost: travisci.vagrant
+  redis:
+    url: redis://vm-travis-web:6379/0

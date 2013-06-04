@@ -16,3 +16,9 @@ test:
   <<: *defaults
   database: travis_test
 
+vagrant:
+  <<: *defaults
+  host: vm-travis-web
+  database: travis_vagrant
+  username: postgres
+  password: password
